@@ -1,0 +1,239 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	background-color: #5C57A6;
+}
+
+#wrapper {
+	background-color: #fff;
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.main {
+	
+	width: 150px;
+	float: left;
+}
+
+.previous {
+	
+	width: 150px;
+	float: left;
+	
+}
+
+
+/* Login/Logout button */
+.logout_button {
+	float: right;
+	width: 150px;
+	
+}
+
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+	vertical-align: middle;
+	text-align: center;
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+.header {
+	width: 850px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+.container {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+	background-color: #FFF;
+}
+.container .content h2 {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	vertical-align: middle;
+}
+.container .content .nav2 {
+	width: 960px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.nav {
+	width: 920px;
+	margin-right: auto;
+	margin-left: auto;
+}
+.position {
+	max-width: 310px;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+ul.position {
+	max-width: 310px;
+	list-style-type: none;
+}
+
+ul.position li {
+	display: inline;
+	width: 77px;
+}
+
+.error {
+	color: red;
+	font-size: 14px;
+}
+
+.tinytext {
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+	color: #FFF;
+}
+
+.form_styles .align_right {
+	text-align: right;
+}
+
+.form_styles .align_left {
+	text-align: left;
+}
+
+/* ~~ This is the layout information. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the div. The elements within this div have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+*/
+
+table {
+	max-width: 900px;
+	text-align: center;
+	margin: 0 auto;
+	padding: 5px;
+	background-color: #415eaa;
+	border: 4px;
+}
+table th {
+	color:#AEB1D9;
+	padding: 5px 10px;
+	text-shadow: 3px 3px 3px #000;
+	border: 1px solid #fff;
+	
+	}
+
+table tr td {
+	color: #FFF;
+	font-weight: bold;
+	padding: 5px 10px;
+	text-shadow: 3px 3px 3px #000;
+	letter-spacing: normal;
+	border: 1px solid #fff;
+}
+
+.form_styles tr td:first-of-type {
+	text-align: right;
+}
+
+.form_styles tr td:nth-of-type(2) {
+	text-align: left;
+}
+
+.form_styles tr td:nth-of-type(3) {
+	text-align: left;
+}
+
+.player_position_button {
+	background-color: #fff;
+	font-size: 10px;
+	font-weight: bold;
+	padding: 5px 10px;
+	color: #415eaa;
+	font-weight: bold;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+input[type=submit] {
+	float: right;
+	background-color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+	padding: 5px 10px;
+	color: #415eaa;
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.content {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 10px 0;
+}
+.content ul {
+	list-style-type: none;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+
+
+.footer {
+	width: 960px;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 20px 0 ;
+	}
+
+teamList ul li {
+	list-style-image: url(images/arrow_small.gif);
+}
+.listTeams {
+	width: 150px;
+	margin-right: auto;
+	margin-left: auto;
+}
